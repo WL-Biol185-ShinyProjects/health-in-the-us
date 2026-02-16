@@ -7,10 +7,11 @@ date: "2026-02-16"
 library(readr)
 StateAndCategory <- read_csv("StateAndCategory.csv")
 ```
-``` {removing empty columns}
-StateAndCategory$...14 <- NULL,
-StateAndCategory$...15 <- NULL,
-StateAndCategory$...16 <- NULL,
-StateAndCategory$...17 <- NULL,
+``` {r}
+library(tidyverse)
+StateAndCategory$...14 <- NULL
+StateAndCategory$...15 <- NULL
+StateAndCategory$...16 <- NULL
+StateAndCategory$...17 <- NULL
 StateAndCategory$...18 <- NULL
 ```
