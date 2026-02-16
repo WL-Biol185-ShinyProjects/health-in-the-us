@@ -17,5 +17,31 @@ StateAndCategory$...18 <- NULL
 ```
 
 ```{r}
-StateAndCategory[1:88924, ]
+States <- StateAndCategory[1:88924, ]
 ```
+
+```{r}
+s <- gsub("$","", States$Dollars, fixed = TRUE)
+s <- gsub(",","", s, fixed = TRUE)
+States$Dollars <- as.numeric(s)
+```
+
+```{r}
+s <- gsub("$","", States$`Dollars last year`, fixed = TRUE)
+s <- gsub(",","", s, fixed = TRUE)
+States$`Dollars last year` <- as.numeric(s)
+```
+
+```{r}
+s <- gsub("$","", States$`Dollars 3 years ago`, fixed = TRUE)
+s <- gsub(",","", s, fixed = TRUE)
+States$`Dollars 3 years ago` <- as.numeric(s)
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(States, aes(`Unit sales`)) + geom_density(alpha = 0.2)
+
+```
+
