@@ -15,3 +15,7 @@ StateAndCategory$...16 <- NULL
 StateAndCategory$...17 <- NULL
 StateAndCategory$...18 <- NULL
 ```
+
+```{r}
+StateAndCategory[1:88924, ]
+```
