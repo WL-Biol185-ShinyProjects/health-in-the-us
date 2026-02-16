@@ -45,3 +45,15 @@ ggplot(States, aes(`Unit sales`)) + geom_density(alpha = 0.2)
 
 ```
 
+```{r}
+library(ggplot2)
+ggplot(States,
+       aes(x = as.Date(Date), y = `Unit sales`, color = Category)) +
+  geom_line(alpha = 0.7) +
+  theme_minimal() +
+  labs(title = "Unit Sales Over Time",
+       x = "Date",
+       y = "Unit Sales",
+       color = "Category")
+```
+
