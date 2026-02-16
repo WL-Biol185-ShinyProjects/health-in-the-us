@@ -3,4 +3,14 @@ title: "WorkStateCategory"
 output: html_document
 date: "2026-02-16"
 ---
-
+``` {r}
+library(readr)
+StateAndCategory <- read_csv("StateAndCategory.csv")
+```
+``` {removing empty columns}
+StateAndCategory$...14 <- NULL,
+StateAndCategory$...15 <- NULL,
+StateAndCategory$...16 <- NULL,
+StateAndCategory$...17 <- NULL,
+StateAndCategory$...18 <- NULL
+```
