@@ -57,3 +57,7 @@ ggplot(States,
        color = "Category")
 ```
 
+```{r}
+library(readr)
+write_csv(States, "outputstates.csv")
+```
